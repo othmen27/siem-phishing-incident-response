@@ -113,7 +113,7 @@ During the investigation, **3 alerts were confirmed as True Positives** (actual 
 
 **Screenshots:**  
 ![TP Alert 1 Overview](Screenshots/Phishing1alert.png)  
-![TP Alert 1 TryDetectThis result](Screenshots/result.png)
+![TP Alert 1 TryDetectThis result](Screenshots/Alertmal.png)
 ![TP Alert 1 Report](Screenshots/Report.png)  
 
 ### Step 5: Remdiation
