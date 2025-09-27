@@ -1,0 +1,38 @@
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*.bak
+*.old
+
+# Python virtual environments (if you add scripts later)
+venv/
+.env/
+
+# Node.js dependencies (if you add frontend or tooling later)
+node_modules/
+
+# Compiled files
+*.pyc
+__pycache__/
+dist/
+build/
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.iml
+
+# Backup files
+*~
+
+# Screenshots or sensitive data (optional)
+screenshots/
+evidence/
