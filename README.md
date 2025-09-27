@@ -80,7 +80,7 @@ Shows the alert triggered for the suspicious email.
 ![FP Alert Overview](Screenshots/Screenshot%202025-09-27%20195024.png)
 
 **2. Email Headers / Technical Details:**  
-Displays SPF/DKIM/DMARC results and sender information. 
+Displays SPF/DKIM/DMARC and results. 
 ![FP Email Headers](Screenshots/Mail.png)
 ![Result](Screenshots/result.png)
 
