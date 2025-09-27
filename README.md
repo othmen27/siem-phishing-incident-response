@@ -22,7 +22,23 @@ The SIEM triggered an alert for a suspicious email received by a user.
 - Alert type: Phishing detection
 ![Detection Screenshot](Screenshots/Screenshot%202025-09-27%20195024.png)
 
-## Lessons Learned
+**Outcome:**  
+This alert was later identified as a **False Positive** (benign email, no malicious activity).  
+Proceeded to [False Positive Analysis](#step-3-false-positive-analysis).
+
+### Step 2: Classification
+*(To be filled in…)*
+
+### Step 3: False Positive Analysis
+*(To be filled in…)*
+
+### Step 4: True Positive Analysis
+*(To be filled in…)*
+
+### Step 5: Remdiation
+*(To be filled in…)*
+
+### Step6: Lessons Learned
 - Always check SPF/DKIM/DMARC headers.
 - User awareness is critical.
 - Always check domains and sub-domains.
