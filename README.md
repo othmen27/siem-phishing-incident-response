@@ -13,12 +13,15 @@ This project was made using the website [TryHackMe](https://tryhackme.com/).
 - [Remediation](#step-5-remediation)
 - [Lessons Learned](#lessons-learned)
 
-## Steps
-1. [Detection](#step-1-detection) – Alert triggered in SIEM for suspicious email.
-2. [Classification](#step-2-classification) – Determine if the alert is True Positive or False Positive.
-3. [False Positive Analysis](#step-3-false-positive-analysis) – Investigate alerts that turned out to be harmless.
-4. [True Positive Analysis](#step-4-true-positive-analysis) - Confirmed phishing (true positive).
-5. [Remediation](#step-5-remediation) - Actions taken to contain and resolve the incident.
+### Step 1: Detection
+The SIEM triggered an alert for a suspicious email received by a user.
+
+**Indicators Observed:**
+- Subject: "Complete your final profile setup"
+- Sender: onboarding@hrconnex.thm
+- Alert type: Phishing detection
+![Detection Screenshot](Screenshots/Screenshot%202025-09-27%20195024.png)
+
 ## Lessons Learned
 - Always check SPF/DKIM/DMARC headers.
 - User awareness is critical.
