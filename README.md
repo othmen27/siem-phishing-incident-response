@@ -89,15 +89,32 @@ Displays SPF/DKIM/DMARC and results.
 |--------------------|----------------------------------|
 | Subject             | Complete your final profile setup |
 | Sender              | onboarding@hrconnex.thm          |
-| SPF/DKIM/DMARC      | ✅ Pass                           |
-| URLs                 | Internal portal                  |
+| URLs                 | Internal portal                 |
+| Links                | Safe and doesn't have malware   |
 | Action Required      | None                             |
 
 **Key Takeaway from this False Positive:**  
 - Investigate alerts carefully before taking action; not all alerts are threats.
 
 ### Step 4: True Positive Analysis
-*(To be filled in…)*
+During the investigation, **3 alerts were confirmed as True Positives** (actual phishing attempts).  
+
+
+---
+
+#### Alert 1
+**Subject:** You Amazon Package Couldn't Be Delivered - Action Required
+**Sender:**   uregents@amazon.biz
+
+**Why the alert was triggered:**  
+- Email contained urgent language prompting users to take actions.  
+- Links pointed to a suspicious external URL (`http://bit.ly/3sHkX3da12340\n\nlf`).  
+- Sender domain did not match official company domain.  
+
+**Screenshots:**  
+![TP Alert 1 Overview](Screenshots/Phishing1alert.png)  
+![TP Alert 1 TryDetectThis result](Screenshots/result.png)
+![TP Alert 1 Report](Screenshots/Report.png)  
 
 ### Step 5: Remdiation
 *(To be filled in…)*
