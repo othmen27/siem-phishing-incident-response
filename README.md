@@ -61,7 +61,34 @@ After detecting the alerts in the SIEM, each alert was analyzed to determine whe
 - Proceed to [True Positive Analysis](#step-4-true-positive-analysis) for the confirmed phishing attempts.
 
 ### Step 3: False Positive Analysis
-*(To be filled in…)*
+
+**Subject:** Complete your final profile setup  
+**Sender:** onboarding@hrconnex.thm  
+
+**Why the alert was triggered:**  
+- The email contained url like "https://hrconnex.thm/" that matched phishing detection rules.   
+- The sender domain was new to the recipient, triggering caution rules.
+
+**Analysis:**  
+- Confirmed that links point to the official internal portal.
+- Cross-checked with threat intelligence: no IOCs found.
+
+**Screenshots:**  
+![FP Alert Overview](Screenshots/Screenshot%202025-09-27%20195024.png)
+![FP Email Headers](Screenshots/Mail.png)
+
+
+**Summary Table:**
+| Field               | Observation                      |
+|--------------------|----------------------------------|
+| Subject             | Complete your final profile setup |
+| Sender              | onboarding@hrconnex.thm          |
+| SPF/DKIM/DMARC      | ✅ Pass                           |
+| URLs                 | Internal portal                  |
+| Action Required      | None                             |
+
+**Key Takeaway from this False Positive:**  
+- Investigate alerts carefully before taking action; not all alerts are threats.
 
 ### Step 4: True Positive Analysis
 *(To be filled in…)*
@@ -69,7 +96,7 @@ After detecting the alerts in the SIEM, each alert was analyzed to determine whe
 ### Step 5: Remdiation
 *(To be filled in…)*
 
-### Step6: Lessons Learned
+### Step 6: Lessons Learned
 - Always check SPF/DKIM/DMARC headers.
 - User awareness is critical.
 - Always check domains and sub-domains.
