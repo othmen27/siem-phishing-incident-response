@@ -1,8 +1,12 @@
 # Phishing Incident Response – SIEM Project
 
 ## Overview
-This project simulates detecting and responding to a phishing email using a SIEM platform. 
-It covers alert detection, classification, analysis of true positives and false positives, and remediation steps.
+This project simulates detecting and responding to multiple phishing email alerts using a SIEM platform.  
+During the investigation, a total of **5 alerts** were observed:  
+- Some were classified as **False Positives** (legitimate activity flagged as suspicious).  
+- At least one was confirmed as a **True Positive** phishing attempt.  
+
+The project covers the full workflow: detection, classification, analysis of false positives and true positives, and remediation steps.  
 This project was made using the website [TryHackMe](https://tryhackme.com/).
 
 ## Table of Contents
@@ -27,7 +31,34 @@ This alert was later identified as a **False Positive** (benign email, no malici
 Proceeded to [False Positive Analysis](#step-3-false-positive-analysis).
 
 ### Step 2: Classification
-*(To be filled in…)*
+After detecting the alerts in the SIEM, each alert was analyzed to determine whether it was a **True Positive (TP)** or a **False Positive (FP)**.
+
+**Total Alerts Observed:** 5  
+- **True Positives:** 3  
+- **False Positives:** 2  
+
+**Classification Process:**
+1. **Email Header Analysis**
+   - Verified sender domains for legitimacy.
+
+2. **Content Inspection**
+   - Reviewed email subject, body, and links.
+   - Checked for suspicious or obfuscated URLs.
+
+3. **Threat Intelligence & IOCs**
+   - Cross-referenced sender IPs and URLs with known malicious indicators.
+   - Confirmed phishing signatures where applicable.
+
+4. **User Interaction**
+   - Checked whether recipients clicked links or downloaded attachments.
+
+**Outcome:**
+- **False Positives (2 alerts):** Legitimate emails flagged by the SIEM. No malicious content detected.  
+- **True Positives (3 alerts):** Confirmed phishing attempts with malicious links or attachments targeting users.
+
+**Next Steps:**  
+- Proceed to [False Positive Analysis](#step-3-false-positive-analysis) for the benign alerts.  
+- Proceed to [True Positive Analysis](#step-4-true-positive-analysis) for the confirmed phishing attempts.
 
 ### Step 3: False Positive Analysis
 *(To be filled in…)*
