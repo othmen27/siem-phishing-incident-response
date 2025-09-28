@@ -150,7 +150,7 @@ During the investigation, **3 alerts were confirmed as True Positives** (actual 
 **Screenshots:**  
 **1. Firewall Alert Overview:**  
 Shows the blocked outbound connection attempt.  
-![Firewall Alert](Screenshots/FirewallAlert.png)  
+![Firewall Alert](Screenshots/firewallalert.png)  
 
 **Summary Table:**  
 
