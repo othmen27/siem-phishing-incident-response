@@ -17,6 +17,8 @@ This project was made using the website [TryHackMe](https://tryhackme.com/).
 - [Remediation](#step-5-remediation)
 - [Lessons Learned](#lessons-learned)
 
+---
+
 ### Step 1: Detection
 The SIEM triggered an alert for a suspicious email received by a user.
 
@@ -29,6 +31,8 @@ The SIEM triggered an alert for a suspicious email received by a user.
 **Outcome:**  
 This alert was later identified as a **False Positive** (benign email, no malicious activity).  
 Proceeded to [False Positive Analysis](#step-3-false-positive-analysis).
+
+---
 
 ### Step 2: Classification
 After detecting the alerts in the SIEM, each alert was analyzed to determine whether it was a **True Positive (TP)** or a **False Positive (FP)**.
@@ -59,6 +63,8 @@ After detecting the alerts in the SIEM, each alert was analyzed to determine whe
 **Next Steps:**  
 - Proceed to [False Positive Analysis](#step-3-false-positive-analysis) for the benign alerts.  
 - Proceed to [True Positive Analysis](#step-4-true-positive-analysis) for the confirmed phishing attempts.
+
+---
 
 ### Step 3: False Positive Analysis
 
@@ -103,6 +109,9 @@ During the investigation, **3 alerts were confirmed as True Positives** (actual 
 ---
 
 #### Alert 1
+## Phishing E-mail Attempt
+
+**Alert Details:** 
 **Subject:** You Amazon Package Couldn't Be Delivered - Action Required
 **Sender:**   uregents@amazon.biz
 
@@ -115,6 +124,48 @@ During the investigation, **3 alerts were confirmed as True Positives** (actual 
 ![TP Alert 1 Overview](Screenshots/Phishing1alert.png)  
 ![TP Alert 1 TryDetectThis result](Screenshots/Alertmal.png)
 ![TP Alert 1 Report](Screenshots/Report.png)  
+
+**Outcome / Action Taken:**  
+- Alert confirmed as a phishing attempt.  
+- No user interaction due to firewall block.
+
+---
+
+#### Alert 2
+## Firewall Blocked Attempt
+
+**Alert Details:** 
+- **Type:** Firewall alert – outbound connection blocked  
+- **Source IP (internal user):** `10.20.2.17`  
+- **Destination IP (malicious site):** `67.199.248.11`  
+- **Source Port:** `34257`  
+- **Destination Port:** `80` (HTTP)  
+- **Trigger:** User clicked a phishing link, firewall blocked the connection to the external malicious host.  
+
+**Why the alert was triggered:**  
+- User attempted to click a phishing link from a malicious email.  
+- The firewall detected an outbound HTTP connection to a URL that is listed in the blacklist.  
+- Destination IP (`67.199.248.11`) is known to be malicious.    
+
+**Screenshots:**  
+**1. Firewall Alert Overview:**  
+Shows the blocked outbound connection attempt.  
+![Firewall Alert](Screenshots/FirewallAlert.png)  
+
+**Summary Table:**  
+
+| Field          | Observation                           |
+|----------------|---------------------------------------|
+| Source IP      | 10.20.2.17 (employee workstation)      |
+| Destination IP | 67.199.248.11 (malicious host)         |
+| Source Port    | 34257                                 |
+| Destination    | 80 (HTTP)                             |
+| Action Taken   | Blocked by firewall, user notified     |
+
+**Outcome / Action Taken:**  
+- Firewall successfully blocked the connection to the malicious host.  
+- No payload was downloaded, and no compromise occurred.  
+- User was notified and advised on phishing awareness.  
 
 ### Step 5: Remdiation
 *(To be filled in…)*
