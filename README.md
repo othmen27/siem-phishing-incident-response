@@ -108,8 +108,8 @@ During the investigation, **3 alerts were confirmed as True Positives** (actual 
 
 ---
 
-#### Alert 1
-## Phishing E-mail Attempt
+## Alert 1
+### Phishing E-mail Attempt
 
 **Alert Details:** 
 **Subject:** You Amazon Package Couldn't Be Delivered - Action Required
@@ -131,8 +131,8 @@ During the investigation, **3 alerts were confirmed as True Positives** (actual 
 
 ---
 
-#### Alert 2
-## Firewall Blocked Attempt
+## Alert 2
+### Firewall Blocked Attempt
 
 **Alert Details:** 
 - **Type:** Firewall alert – outbound connection blocked  
