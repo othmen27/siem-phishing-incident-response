@@ -168,7 +168,27 @@ Shows the blocked outbound connection attempt.
 - User was notified and advised on phishing awareness.  
 
 ### Step 5: Remdiation
-*(To be filled in…)*
+
+Since this incident was conducted as a **simulation**, no real containment or recovery actions were required.  
+However, based on the analysis and findings, several **recommended remediation steps** and **future improvements** were identified to strengthen the organization’s incident response posture.
+
+**Proposed Remediation Actions:**
+- **User Awareness Training:** Conduct periodic phishing and social engineering awareness sessions to reduce the risk of user interaction with malicious links.
+- **Access Control Improvements:** Implement **Multi-Factor Authentication (MFA)** for all users to prevent account compromise.
+- **SIEM Rule Refinement:** Enhance correlation rules to detect:
+  - Repeated login attempts from unusual geolocations.
+  - Suspicious domains and newly registered URLs.
+  - Emails containing known phishing indicators (e.g., “urgent,” “verify,” “reset password”).
+- **Incident Response Playbook:** Create or update a detailed **playbook** for handling phishing or email-based incidents, defining responsibilities and escalation procedures.
+- **Threat Intelligence Integration:** Connect SIEM to **external threat feeds** for real-time detection of malicious IPs and domains.
+- **System Patching & Updates:** Ensure that all systems are regularly patched and monitored for vulnerabilities.
+
+**Key Takeaways:**
+- The SIEM successfully detected suspicious activity.
+- Future focus should be on **automated response actions** and **reducing false positives.**
+- Regular testing and continuous tuning are essential to maintain effective detection capabilities.
+
+---
 
 ### Step 6: Lessons Learned
 - Always check SPF/DKIM/DMARC headers.
