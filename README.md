@@ -167,7 +167,14 @@ Shows the blocked outbound connection attempt.
 - No payload was downloaded, and no compromise occurred.  
 - User was notified and advised on phishing awareness.  
 
-### Step 5: Remdiation
+---
+
+## Alert 3
+Since this alert is not different from the first alert i'm not gonna walk through it in this write-up.
+
+---
+
+### Step 5: Remediation
 
 Since this incident was conducted as a **simulation**, no real containment or recovery actions were required.  
 However, based on the analysis and findings, several **recommended remediation steps** and **future improvements** were identified to strengthen the organization’s incident response posture.
